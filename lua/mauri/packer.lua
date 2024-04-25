@@ -13,6 +13,12 @@ return require('packer').startup(function(use)
   requires = { {'nvim-lua/plenary.nvim'} }
 
 }
+  use({
+    "stevearc/conform.nvim",
+    config = function()
+      require("conform").setup()
+    end,
+  })
 
   use ({ 
 	  "rose-pine/neovim", as = "rose-pine" ,
@@ -26,12 +32,13 @@ return require('packer').startup(function(use)
   use('ThePrimeagen/harpoon')
   use 'mbbill/undotree'
   use('tpope/vim-fugitive')
+  use 'jose-elias-alvarez/null-ls.nvim'
+--  use 'fatih/vim-go'
 
   use {
 	  "VonHeikemen/lsp-zero.nvim",
 	  branch = "v1.x",
 	  requires = {
-		  -- LSP Support
 		  {"neovim/nvim-lspconfig"},
 		  {"williamboman/mason.nvim"},
 		  {"williamboman/mason-lspconfig.nvim"},
