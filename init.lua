@@ -91,3 +91,19 @@ func ToggleComment(comment_type, mode)
     endif
 endfunc
 ]])
+
+exts = {
+  [ '*.s' ] = 'gas',
+  [ '*.S' ] = 'gas',
+  [ '*.asm' ] = 'nasm',
+  [ '*.mod' ] = 'ampl',
+  [ '*.bats' ] = 'sh',
+  [ 'Dockerfile*' ] = 'dockerfile',
+}
+for pat, ft in pairs(exts) do
+  vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
+    pattern = pat,
+    command = 'set filetype=' .. ft
+  })
+end
+
