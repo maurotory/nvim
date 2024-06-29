@@ -32,6 +32,18 @@ return require('packer').startup(function(use)
   use('ThePrimeagen/harpoon')
   use 'mbbill/undotree'
   use('tpope/vim-fugitive')
+  -- packer.nvim
+use({
+    "robitx/gp.nvim",
+    config = function()
+        require("gp").setup()
+
+	-- or setup with your own config (see Install > Configuration in Readme)
+	-- require("gp").setup(config)
+
+        -- shortcuts might be setup here (see Usage > Shortcuts in Readme)
+    end,
+})
   use 'jose-elias-alvarez/null-ls.nvim'
 --  use 'fatih/vim-go'
 

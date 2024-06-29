@@ -53,3 +53,44 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+vim.api.nvim_set_keymap('n', '<C-g>a', ':GpAppend<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-g>v', ':GpChatToggle<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-g>t', ':GpChatToggle tabnew<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-g>n', ':GpChatNew<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-g>i', ':GpImage<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-g>c', ':GpContext<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-g>]', ':GpNextAgent<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('n', '<C-g>[', ':GpNextAgent<CR>', { noremap = true, silent = true })
+ 
+vim.api.nvim_set_keymap('v', '<C-g>r', ":<C-u>'<,'>GpRewrite<CR>", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('v', '<C-g>y', ":<C-u>'<,'>GpChatPaste<CR>", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap(
+    'n', '<C-l>', ':vertical resize +10<CR>',
+    { noremap = true, silent = true }
+)
+
+vim.api.nvim_set_keymap(
+    'n', '<C-h>', ':vertical resize -10<CR>',
+    { noremap = true, silent = true }
+)
+
+-- vim.api.nvim_set_keymap(
+    -- 'n', '<C-y>', ':resize +5<CR>',
+    -- { noremap = true, silent = true }
+-- )
+
+-- vim.api.nvim_set_keymap(
+    -- 'n', '<C-h>', ':resize -5<CR>',
+    -- { noremap = true, silent = true }
+-- )
+--
+vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<CR>', { noremap = true, silent = true })
