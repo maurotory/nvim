@@ -99,6 +99,7 @@ exts = {
   [ '*.mod' ] = 'ampl',
   [ '*.bats' ] = 'sh',
   [ 'Dockerfile*' ] = 'dockerfile',
+  [ '*.groovy' ] = 'groovy',
 }
 for pat, ft in pairs(exts) do
   vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {

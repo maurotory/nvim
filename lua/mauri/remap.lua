@@ -74,19 +74,19 @@ vim.api.nvim_set_keymap('v', '<C-g>r', ":<C-u>'<,'>GpRewrite<CR>", { noremap = t
 vim.api.nvim_set_keymap('v', '<C-g>y', ":<C-u>'<,'>GpChatPaste<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap(
-    'n', '<C-l>', ':vertical resize +10<CR>',
-    { noremap = true, silent = true }
-)
-
-vim.api.nvim_set_keymap(
-    'n', '<C-h>', ':vertical resize -10<CR>',
+    'n', '<C-l>', ':vertical resize +5<CR>',
     { noremap = true, silent = true }
 )
 
 -- vim.api.nvim_set_keymap(
-    -- 'n', '<C-y>', ':resize +5<CR>',
+    -- 'n', '<C-h>', ':vertical resize -10<CR>',
     -- { noremap = true, silent = true }
 -- )
+
+vim.api.nvim_set_keymap(
+    'n', '<C-m>', ':resize +2<CR>',
+    { noremap = true, silent = true }
+)
 
 -- vim.api.nvim_set_keymap(
     -- 'n', '<C-h>', ':resize -5<CR>',
