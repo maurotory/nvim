@@ -112,7 +112,7 @@ vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'c', 'cpp', 'cs', 'go', 'make', 'gas', 'nasm', 'arduino', 'pccts', 'pov' },
   command = 'setlocal tabstop=4 softtabstop=4 shiftwidth=4'
 })
- 
+
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'php', 'glsl', 'kotlin', 'java', 'rust', 'fsharp', 'coffee', 'prolog',
     'fish', 'swiprolog', 'tex', 'r', 'matlab', 'rmd', 'julia', 'ampl', 'bib', 'sql',
@@ -121,7 +121,7 @@ vim.api.nvim_create_autocmd('FileType', {
   },
   command = 'setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab'
 })
- 
+
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'html', 'xml', 'dart', 'zsh', 'vim', 'sh', 'ruby', 'scala', 'haskell',
     'purescript', 'vue', 'reason', 'ocaml', 'javascript', 'css', 'json', 'lua',

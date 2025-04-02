@@ -54,24 +54,28 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
-vim.api.nvim_set_keymap('n', '<C-g>a', ':GpAppend<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-g>v', ':GpChatToggle<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-g>n', ':ChatGPT<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-g>e', ':ChatGPTRun explain_code<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-g>a', ':ChatGPTEdihWithInstruction<CR>', { noremap = true, silent = true })
+--
+-- vim.api.nvim_set_keymap('n', '<C-g>a', ':GpAppend<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-g>v', ':GpChatToggle<CR>', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', '<C-g>t', ':GpChatToggle tabnew<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-g>t', ':GpChatToggle tabnew<CR>', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', '<C-g>n', ':GpChatNew<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-g>n', ':GpChatNew<CR>', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', '<C-g>i', ':GpImage<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-g>i', ':GpImage<CR>', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', '<C-g>c', ':GpContext<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-g>c', ':GpContext<CR>', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', '<C-g>]', ':GpNextAgent<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-g>]', ':GpNextAgent<CR>', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', '<C-g>[', ':GpNextAgent<CR>', { noremap = true, silent = true })
- 
-vim.api.nvim_set_keymap('v', '<C-g>r', ":<C-u>'<,'>GpRewrite<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-g>[', ':GpNextAgent<CR>', { noremap = true, silent = true })
+ -- 
+-- vim.api.nvim_set_keymap('v', '<C-g>r', ":<C-u>'<,'>GpRewrite<CR>", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('v', '<C-g>y', ":<C-u>'<,'>GpChatPaste<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('v', '<C-g>y', ":<C-u>'<,'>GpChatPaste<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap(
     'n', '<C-l>', ':vertical resize +5<CR>',
@@ -85,6 +89,11 @@ vim.api.nvim_set_keymap(
 
 vim.api.nvim_set_keymap(
     'n', '<C-m>', ':resize +2<CR>',
+    { noremap = true, silent = true }
+)
+
+vim.api.nvim_set_keymap(
+    'n', '<C-h>', ':resize -2<CR>',
     { noremap = true, silent = true }
 )
 
